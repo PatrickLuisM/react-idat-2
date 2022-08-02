@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import { Button, Title, Categories, Image } from './components';
+import { Button, Title, Categories, Image, Card } from './components';
 
 const categories = [
   { id: 1, name: 'Categoria 1' },
@@ -11,6 +11,12 @@ const categories = [
   { id: 6, name: 'Categoria 6' },
   { id: 7, name: 'Categoria 7' },
 ];
+
+const product = {
+  id: 1,
+  name: 'Zapato',
+  price: 1000,
+};
 
 function App() {
   const textButton = 'Mi primer componenete 😎';
@@ -32,6 +38,7 @@ function App() {
         data={categories}
         onCategorySelected={handleCategorySelected}
       />
+      <Card product={product}></Card>
       <Image
         url="https://www.egames.news/__export/1649265025589/sites/debate/img/2022/04/06/top_5_cosas_que_debes_saber_antes_de_ver_la_temporada_2_de_the_rising_of_the_shield_hero.jpg_423682103.jpg"
         title="hola"
